@@ -1,10 +1,10 @@
-package com.ordenada.chikens;
+package com.ordenada.chickens;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ChikensApplicationTests {
+class ChickensApplicationTests {
 
 	@Test
 	void contextLoads() {

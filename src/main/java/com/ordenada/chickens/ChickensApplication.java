@@ -1,13 +1,13 @@
-package com.ordenada.chikens;
+package com.ordenada.chickens;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ChikensApplication {
+public class ChickensApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ChikensApplication.class, args);
+		SpringApplication.run(ChickensApplication.class, args);
 	}
 
 }
