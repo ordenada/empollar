@@ -1,11 +1,25 @@
 package com.ordenada.chickens.chicken;
 
-import com.ordenada.chickens.clutch.Clutch;
+//import com.ordenada.chickens.clutch.String;
 
+import javax.persistence.*;
+
+@Entity
+@Table
 public class Chicken {
+    @Id
+    @SequenceGenerator(
+            name = "checken_sequence",
+            sequenceName = "checken_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "checken_sequence"
+    )
     private Long id;
     private String name;
-    private Clutch clutch;
+    private String clutch;
     private String color;
     private String breed;
     private String age;
@@ -15,7 +29,7 @@ public class Chicken {
 
     public Chicken(Long id,
                    String name,
-                   Clutch clutch,
+                   String clutch,
                    String color,
                    String breed,
                    String age) {
@@ -28,7 +42,7 @@ public class Chicken {
     }
 
     public Chicken(String name,
-                   Clutch clutch,
+                   String clutch,
                    String color,
                    String breed,
                    String age) {
@@ -55,11 +69,11 @@ public class Chicken {
         this.name = name;
     }
 
-    public Clutch getClutch() {
+    public String getClutch() {
         return clutch;
     }
 
-    public void setClutch(Clutch clutch) {
+    public void setClutch(String clutch) {
         this.clutch = clutch;
     }
 
