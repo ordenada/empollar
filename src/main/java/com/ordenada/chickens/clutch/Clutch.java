@@ -2,9 +2,24 @@ package com.ordenada.chickens.clutch;
 
 import com.ordenada.chickens.chicken.Chicken;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table
 public class Clutch {
+
+    @Id
+    @SequenceGenerator(
+            name = "clutch_sequence",
+            sequenceName = "clutch_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "clutch_sequence"
+    )
+
     private Long id;
     private Date startDate;
     private Date endDate;
